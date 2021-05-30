@@ -1,0 +1,29 @@
+{
+  "name": "bq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.29",
+    "angular": ">=1.2.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build --public-url / -d ./target/classes/public ./src/main/resources/public/index.html",
+    "start-dev": "parcel --public-url / -d ./target/classes/public ./src/main/resources/public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZemourKhaled/bq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZemourKhaled/bq/issues"
+  },
+  "homepage": "https://github.com/ZemourKhaled/bq#readme"
+}
