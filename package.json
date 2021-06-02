@@ -9,12 +9,13 @@
     "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
+    "@types/node": "^15.6.1",
     "typescript": "^4.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build --public-url / -d ./target/classes/public ./src/main/resources/public/index.html",
-    "start-dev": "parcel --public-url / -d ./target/classes/public ./src/main/resources/public/index.html"
+    "build": "parcel build --public-url / -d target/classes/public src/main/resources/public/index.html src/main/resources/public/accueil.html src/main/resources/public/login.html src/main/resources/public/compte.html",
+    "start-dev": "parcel --public-url / -d target/classes/public src/main/resources/public/index.html src/main/resources/public/accueil.html src/main/resources/public/login.html src/main/resources/public/compte.html"
   },
   "repository": {
     "type": "git",

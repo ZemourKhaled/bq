@@ -22,7 +22,7 @@ export default class LoginCtrl {
         this.userService.login(data)
             .then((response) => {
                 if (response.status === 200)
-                    document.location.href = "/index";
+                    document.location.href = "/compte";
             })
     }
 
@@ -31,7 +31,7 @@ export default class LoginCtrl {
             .then((user) => {
                 if (user) {
                     this.logged = user;
-                    document.location.href="/index";
+                    document.location.href="/compte";
                 }
 
             })
