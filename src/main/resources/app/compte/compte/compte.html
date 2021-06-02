@@ -1,19 +1,37 @@
-<header>
-  <span ng-if="ctrl.userService.user"
-        class="fas fa-user-alt fa-2x"
-        title="Connecté en tant que {{ctrl.userService.user.email}}"
-  > {{ctrl.userService.user.name}}</span>
-    <div>
-        <span class="title"><b>BQ Bank</b></span>
+<div class="Side_bar_nv">
+  <div class="d-flex flex-column p-3 bg-invisible" style="width: 280px;">
+    <a href="/">
+      <img src="Assets/logo.png" alt="" class="logo_sidebar">
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item" >
+        <a href="#" class="nav-link  active bg-light text-dark">
+          Tableau de bord
+        </a>
+      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+<div class="body-content">
+  <div class="container">
+    <div class="col-xl-12">
+      <div class="row">
+        <div ng-repeat="compte in ctrl.comptes track by $index" class="col-xl-4 col-lg-6 col-md-6">
+          <div class="widget-card">
+            <div class="widget-title">
+              <h5>{{compte.name}}</h5>
+            </div>
+            <div class="widget-info">
+              <h3 style="color: cornflowerblue;" id="solde-courant">{{compte.montent}}</h3>
+              <p>EUR</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <span ng-if="ctrl.userService.user"
-          title="Se déconnecter"
-          class="fas fa-sign-out-alt fa-2x"
-          ng-click="ctrl.userService.logout();"></span>
-</header>
-
-<body>
-
-
-
-</body>
+  </div>
+</div>
